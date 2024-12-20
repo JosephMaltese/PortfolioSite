@@ -3,19 +3,19 @@ import Card from "./Card";
 
 const Projects = () => {
   return (
-    <div className="h-96" id="projects">
+    <div className="mb-32" id="projects">
         <div className="flex justify-center">
             <h2 className="text-sky-300 text-5xl font-bold mt-20">Here's Some Of My Recent Projects</h2>
         </div>
 
         <div>
-            <div className='flex flex-row justify-around mt-5'>
+            <div className='flex flex-row justify-center mt-5'>
                 <Card imageName="homePage.png" title="Wedding RSVP Site" description="A full-stack web application for my brother's upcoming wedding to monitor guest attendance and allow guests to RSVP virtually." link="https://github.com/JosephMaltese/WeddingSite"/>
                 <Card imageName="stablit.png" title="STaBLit" description="A reddit clone created using the IHP framework for Haskell. Includes features for user authentication and login, creating and editing posts, recursive comments, and post reactions." link="https://github.com/JosephMaltese/STaBLit"/>
             </div>
-            <div className='flex flex-row justify-around mt-12'>
+            <div className='flex flex-row justify-center mt-12'>
                 <Card imageName="Sudoku2.png" title="Sudoku Solver GUI" description="A GUI developed in C using the GTK toolkit to create an interactive application that solves Sudoku puzzles using a recursive backtracking algorithm." link="https://github.com/JosephMaltese/WeddingSite"/>
-                <Card imageName="homePage.png" title="Wedding RSVP site" description="description" link="https://github.com/JosephMaltese/WeddingSite"/>
+                <Card imageName="Traffic2.png" title="Traffic Sign Classification AI" description="A neural network that identifies road signs (stop signs, yield signs, etc.) from images using the Keras, TensorFlow, and scikit-learn Libraries. Trained on the German Traffic Sign Recognition Benchmark (GTSRB) dataset." link="https://github.com/me50"/>
             </div>
         </div>
     </div>

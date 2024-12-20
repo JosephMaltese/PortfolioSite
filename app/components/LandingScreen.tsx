@@ -4,10 +4,10 @@ import { BackgroundBeams } from "./ui/background-beams";
 
 const LandingScreen = () => {
   return (
-    <>
+    <div id="home">
         <LandingContent/>
         <BackgroundBeams/>
-    </>
+    </div>
   )
 }
 
