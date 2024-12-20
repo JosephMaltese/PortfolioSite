@@ -14,7 +14,7 @@ const Projects = () => {
                 <Card imageName="stablit.png" title="STaBLit" description="A reddit clone created using the IHP framework for Haskell. Includes features for user authentication and login, creating and editing posts, recursive comments, and post reactions." link="https://github.com/JosephMaltese/STaBLit"/>
             </div>
             <div className='flex flex-row justify-around mt-12'>
-                <Card imageName="homePage.png" title="Wedding RSVP site" description="description" link="https://github.com/JosephMaltese/WeddingSite"/>
+                <Card imageName="Sudoku2.png" title="Sudoku Solver GUI" description="A GUI developed in C using the GTK toolkit to create an interactive application that solves Sudoku puzzles using a recursive backtracking algorithm." link="https://github.com/JosephMaltese/WeddingSite"/>
                 <Card imageName="homePage.png" title="Wedding RSVP site" description="description" link="https://github.com/JosephMaltese/WeddingSite"/>
             </div>
         </div>
