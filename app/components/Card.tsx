@@ -12,7 +12,7 @@ const Card = ({ imageName, title, description, link }: { imageName: string, titl
             <h2 className="card-title">{title}</h2>
             <p>{description}</p>
             <div className="card-actions">
-                <a className="text-sky-200 flex flex-row justify-center items-center" href={link} target="_blank" >Check it out! <img src="githubicon.png" className='size-5 ml-2'/></a>
+                <a className="text-sky-200 flex flex-row justify-center items-center" href={link} target="_blank" >Check it out! <img src="GithubSocialicon4.png" className='size-5 ml-2'/></a>
             </div>
         </div>
     </div>
