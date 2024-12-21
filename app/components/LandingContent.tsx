@@ -7,7 +7,7 @@ const LandingScreen = () => {
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img
                 src="/selfPortrait.jpg"
-                className="max-w-sm rounded-lg shadow-2xl" />
+                className="w-[70%] h-auto max-w-[80%] rounded-lg shadow-2xl md:w-[30%] md:h-[50%]" />
                 <div>
                 <h1 className="text-5xl font-bold">Hi, I'm <span className="text-sky-300">Joseph Maltese</span></h1>
                 <p className="py-6">
