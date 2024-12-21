@@ -9,7 +9,7 @@ const LandingScreen = () => {
                 src="/selfPortrait.jpg"
                 className="w-[70%] h-auto max-w-[80%] rounded-lg shadow-2xl md:w-[30%] md:h-[50%]" />
                 <div>
-                <h1 className="text-5xl font-bold">Hi, I'm <span className="text-sky-300">Joseph Maltese</span></h1>
+                <h1 className="text-5xl font-bold">Hi, I&apos;m <span className="text-sky-300">Joseph Maltese</span></h1>
                 <p className="py-6">
                   A second-year Computer Science (BASc) Co-op student at McMaster University with a passion for developing efficient,
                   scalable, and user-friendly software. I thrive on continuous learning and exploring new technologies, with particular
