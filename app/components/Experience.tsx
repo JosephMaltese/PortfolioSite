@@ -11,7 +11,7 @@ const Experience = () => {
         <Timeline data={[
           { title:"2024", content: (
             <div>
-              <ExperienceItem organizationName='McMaster Start Coding | McMaster University' role="Software Engineer" description='Works with a team of volunteer software developers to maintain and develop the STaBL.rocks web application, which is used by McMaster Start Coding to teach K-PhD students the fundamentals of programming. Utilizes scrum methodologies. Uses the full-stack Haskell web framework, IHP.' date="September 2024-Present" imageName='mcmasterStartCoding.jpg'/>
+              <ExperienceItem organizationName='McMaster Start Coding | McMaster University' role="Software Developer" description='Works with a team of volunteer software developers to maintain and develop the STaBL.rocks web application, which is used by McMaster Start Coding to teach K-PhD students the fundamentals of programming. Utilizes scrum methodologies. Uses the full-stack Haskell web framework, IHP.' date="September 2024-Present" imageName='mcmasterStartCoding.jpg'/>
               <ExperienceItem organizationName='HammerHacks | McMaster University' role="Technical Mentor" description='Helped students brainstorm creative project ideas which fit the theme of the hackathon. Gave suggestions for which technologies could help them achieve their goals. Assisted with any technical issues that students faced throughout the course of the competition.' date="November 23, 2024" imageName='hammerHacks.webp'/>
             </div>
           ) },
