@@ -10,7 +10,7 @@ const Projects = () => {
 
         <div>
             <div className='flex flex-row justify-center mt-5'>
-                <Card imageName="homePage.png" title="Wedding RSVP Site" description="A full-stack web application for my brother's upcoming wedding to monitor guest attendance and allow guests to RSVP virtually." link="https://github.com/JosephMaltese/WeddingSite"/>
+                <Card imageName="homePage.png" title="Wedding RSVP Site" description="A full-stack web application for my brother's upcoming wedding to monitor guest attendance and allow guests to RSVP virtually." link="https://github.com/JosephMaltese/WeddingSite-Frontend"/>
                 <Card imageName="stablit.png" title="STaBLit" description="A reddit clone created using the IHP framework for Haskell. Includes features for user authentication and login, creating and editing posts, recursive comments, and post reactions." link="https://github.com/JosephMaltese/STaBLit"/>
             </div>
             <div className='flex flex-row justify-center mt-12'>
