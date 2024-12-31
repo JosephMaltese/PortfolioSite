@@ -17,6 +17,9 @@ const Projects = () => {
                 <Card imageName="Sudoku2.png" title="Sudoku Solver GUI" description="A GUI developed in C using the GTK toolkit to create an interactive application that solves Sudoku puzzles using a recursive backtracking algorithm." link="https://github.com/JosephMaltese/WeddingSite"/>
                 <Card imageName="Traffic2.png" title="Traffic Sign Classification AI" description="A neural network that identifies road signs (stop signs, yield signs, etc.) from images using the Keras, TensorFlow, and scikit-learn Libraries. Trained on the German Traffic Sign Recognition Benchmark (GTSRB) dataset." link="https://github.com/me50"/>
             </div>
+            <div className='flex justify-center mt-5 px-[20%]'>
+                <Card imageName='musicAppUI.png' title='Concert Tracker' description="A NextJS Web app that uses the Spotify API to find nearby concerts based on a user's favourite artists!" link='https://github.com/JosephMaltese/ConcertTracker' />
+            </div>
         </div>
     </div>
   )
