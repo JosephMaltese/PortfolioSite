@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LandingScreen = () => {
+const LandingContent = () => {
   return (
     <>
         <div className="hero bg-base-200 min-h-screen">
@@ -26,4 +26,4 @@ const LandingScreen = () => {
   )
 }
 
-export default LandingScreen
+export default LandingContent
