@@ -6,7 +6,7 @@ const Card = ({ imageName, title, description, link }: { imageName: string, titl
         <figure className="px-10 pt-10">
             <img
             src={imageName}
-            className="rounded-xl" />
+            className="rounded-xl max-h-[300px]" />
         </figure>
         <div className="card-body items-center text-center">
             <h2 className="card-title">{title}</h2>

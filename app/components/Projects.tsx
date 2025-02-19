@@ -11,7 +11,7 @@ const Projects = () => {
         <div>
             <div className='flex flex-row justify-center mt-5'>
                 <Card imageName="homePage.png" title="Wedding RSVP Site" description="A full-stack web application for my brother's upcoming wedding to monitor guest attendance and allow guests to RSVP virtually." link="https://github.com/JosephMaltese/WeddingSite-Frontend"/>
-                <Card imageName="stablit.png" title="STaBLit" description="A reddit clone created using the IHP framework for Haskell. Includes features for user authentication and login, creating and editing posts, recursive comments, and post reactions." link="https://github.com/JosephMaltese/STaBLit"/>
+                <Card imageName="uoft_hacks_demo.gif" title="Moodify" description="Moodify is an AI-powered journaling platform developed at UofTHacks 12, designed to help users reflect, articulate their thoughts, and foster positive thinking. It uses generative AI technologies to summarize journal entries and offer unique perspectives." link="https://github.com/JosephMaltese/Moodify"/>
             </div>
             <div className='flex flex-row justify-center mt-12'>
                 <Card imageName="Sudoku2.png" title="Sudoku Solver GUI" description="A GUI developed in C using the GTK toolkit to create an interactive application that solves Sudoku puzzles using a recursive backtracking algorithm." link="https://github.com/JosephMaltese/WeddingSite"/>
