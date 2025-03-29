@@ -6,7 +6,7 @@ const Experience = () => {
   return (
     <div id="Experience">
       <div className="flex justify-center items-center">
-        <h2 className="text-sky-300 text-5xl font-bold mt-3">My Experience</h2>
+        <h2 className="text-sky-300 text-4xl sm:text-5xl font-bold mt-3">My Experience</h2>
       </div>
         <Timeline data={[
           {

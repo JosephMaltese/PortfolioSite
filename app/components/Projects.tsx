@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <div className="mb-32" id="projects">
         <div className="flex justify-center">
-            <h2 className="text-sky-300 text-5xl font-bold mt-20 text-center max-w-[80%]">What I&apos;ve Been Working On Recently</h2>
+            <h2 className="text-sky-300 text-4xl sm:text-5xl font-bold mt-20 text-center max-w-[80%]">What I&apos;ve Been Working On Recently</h2>
         </div>
 
         <div>

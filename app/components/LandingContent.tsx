@@ -31,7 +31,7 @@ const LandingContent = () => {
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content">
               <div className='justify-center'>
-                <h1 className="text-3xl sm:text-5xl font-bold px-5">Hi, I&apos;m <span className="text-sky-300">Joseph Maltese</span></h1>
+                <h1 className="text-4xl sm:text-5xl font-bold px-5">Hi, I&apos;m <span className="text-sky-300">Joseph Maltese</span></h1>
                 <p className="py-10 px-5">
                   A second-year Computer Science (BASc) Co-op student at McMaster University with a passion for coding and software development. I love to learn and explore new technologies, with particular
                   interest in full-stack development and artificial intelligence. As a member of the Software Architecture team for McMaster
