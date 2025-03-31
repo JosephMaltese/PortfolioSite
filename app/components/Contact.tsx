@@ -4,7 +4,7 @@ import { ButtonsCard } from "./ui/tailwindcss-buttons";
 const Contact = () => {
   return (
     <div className="flex flex-col justify-center items-center" id="Contact">
-      <h2 className="text-sky-300 text-4xl sm:text-5xl font-bold mt-3 mb-6 text-center">Want To Get In Touch?</h2>
+      <h2 className="text-sky-300 px-5 text-4xl sm:text-5xl font-bold mt-3 mb-6 text-center">Want To Get In Touch?</h2>
       <p className="mb-2 p-8 text-start">I&apos;d love to hear from you! Feel free to reach out.</p>
       <a href="mailto:maltesj@mcmaster.ca" style={{ textDecoration: "none" }}>
         <ButtonsCard onClick={() => console.log('hey')}>
