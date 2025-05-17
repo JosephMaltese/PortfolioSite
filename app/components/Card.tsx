@@ -2,7 +2,7 @@ import React from 'react'
 
 const Card = ({ imageName, title, description, link }: { imageName: string, title: string, description: string, link: string }) => {
   return (
-    <div className="card bg-base-100 w-96 shadow-xl" style={{width: '700px'}}>
+    <div className="card bg-base-100 w-96 shadow-xl lg:w-[600px]" style={{minWidth: '300px'}}>
         <figure className="px-10 pt-10">
             <img
             src={imageName}
