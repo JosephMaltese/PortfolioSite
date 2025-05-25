@@ -12,7 +12,7 @@ const Experience = () => {
           {
             title: "2025", content: (
               <div>
-                <ExperienceItem organizationName='Fondation STaBL Foundation' role="Research Intern" description='Contributing to the design and development of a software project focused on improving computing education, under the
+                <ExperienceItem organizationName='Fondation STaBL Foundation' role="Research & Development Intern" description='Contributing to the design and development of a software project focused on improving computing education, under the
 supervision of Dr. Christopher Anand.' date="April 2025 - August 2025" imageName='fondation_stabl_foundation_logo.jpeg'/>
                 <ExperienceItem organizationName='Google Developer Student Club | McMaster University' role="Web Developer - Marketing & Branding Team" description='Worked with a team of software developers and designers to build and maintain the club&apos;s new website for its 2025 rebranding. Used the Next.js framework to deliver a modern and performant web experience.' date="January 2025 - April 2025" imageName='gdsc_logo.png'/>
               </div>
