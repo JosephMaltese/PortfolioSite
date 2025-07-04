@@ -18,7 +18,7 @@ const Projects = () => {
                 <Card imageName="homePage.png" title="Wedding RSVP Site" description="A full-stack web application for my brother's upcoming wedding to monitor guest attendance and allow guests to RSVP virtually" link="https://github.com/JosephMaltese/WeddingSite-Frontend"/>
             </div>
             <div className='flex sm:flex-row flex-col justify-center mt-5'>
-                <Card imageName="Sudoku2.png" title="Sudoku Solver GUI" description="A GUI developed in C using the GTK toolkit to create an interactive application that solves Sudoku puzzles using a recursive backtracking algorithm." link="https://github.com/JosephMaltese/WeddingSite"/>
+                <Card imageName="Sudoku2.png" title="Sudoku Solver GUI" description="A GUI developed in C using the GTK toolkit to create an interactive application that solves Sudoku puzzles using a recursive backtracking algorithm." link="https://github.com/JosephMaltese/Sudoku-Solver"/>
                 <Card imageName="Traffic2.png" title="Traffic Sign Classification AI" description="A neural network that identifies road signs (stop signs, yield signs, etc.) from images using the Keras, TensorFlow, and scikit-learn Libraries. Trained on the German Traffic Sign Recognition Benchmark (GTSRB) dataset." link="https://github.com/me50/JosephMaltese/tree/ai50/projects/2024/x/traffic"/>
             </div>
         </div>
