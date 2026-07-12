@@ -3,17 +3,26 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: #F8F7F3;
+  --card: #FDFCF9;
   --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --secondary: #6A6A6A;
+  --border: #D9D6CF;
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Inter, Arial, Helvetica, sans-serif;
 }
+
+.ser{
+  font-family: var(--font-serif);
+  letter-spacing: 0.05em;
+}
+
+.san {
+    font-family: var(--font-sans);
+  }
