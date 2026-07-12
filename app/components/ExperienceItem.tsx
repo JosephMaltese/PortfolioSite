@@ -1,14 +1,16 @@
 import React from 'react'
+import {ExperienceData} from "@/app/types/ExperienceData";
+import Image from 'next/image'
 
-const ExperienceItem = ({ organizationName, role, description, date, imageName }: { organizationName: string, role: string, description: string, date: string, imageName: string }) => {
+const ExperienceItem = ({ experienceData }: { experienceData: ExperienceData }) => {
   return (
     <div className='flex flex-row justify-center items-center mb-12'>
-        <img src={imageName} className='w-24 h-24 mr-10'/>
+        <Image src={experienceData.imageName} alt="McMaster Start Coding" width={100} height={100} className="mr-4"/>
         <div>
-            <h2 className='text-white text-2xl sm:text-4xl font-bold'>{role}</h2>
-            <h3 className='text-white text-l sm:text-2xl'>{organizationName}</h3>
-            <h4 className='text-white text-m sm:text-l'>{date}</h4>
-            <p className='text-sm'>{description}</p>
+            <h2 className='text-l sm:text-l font-bold'>{experienceData.role}</h2>
+            <h3 className='text-l sm:text-l'>{experienceData.organizationName}</h3>
+            <h4 className='text-l sm:text-l'>{experienceData.date}</h4>
+            <p className='text-sm'>{experienceData.description}</p>
         </div>
     </div>
   )

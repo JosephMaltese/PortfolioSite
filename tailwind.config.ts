@@ -40,10 +40,10 @@ export default {
       },
     },
   },
-  plugins: [require('daisyui'), addVariablesForColors],
-  daisyui: {
-    themes: ["night"],
-  },
+  // DaisyUI removed: keep only our custom plugin that exports CSS variables
+  // for Tailwind's color palette. Removing daisyUI prevents it from adding
+  // a `data-theme` on the html element and injecting dark theme variables.
+  plugins: [addVariablesForColors],
 } satisfies Config;
 
 

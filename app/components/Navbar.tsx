@@ -17,16 +17,15 @@ const Navbar = () => {
     };
   }, []);
   return isVisible && (
-        <div className="navbar bg-base-100 justify-center fixed z-20">
-            <div className="navbar-center">
-                <ul className="menu menu-horizontal px-1">
+        <div className="flex flex-row w-full justify-between fixed z-20 h-16 items-center" style={{ backgroundColor: '#F8F7F3' }}>
+            <p className="ser ml-8">JM</p>
+            <ul className="flex flex-row px-1">
                 <li><a className="text-lg mx-5" href="#home">Home</a></li>
+                <li><a className="text-lg mx-5" href="#education">Education</a></li>
+                <li><a className="text-lg mx-5" href="#experience">Experience</a></li>
                 <li><a className="text-lg mx-5" href="#projects">Projects</a></li>
-                <li><a className="text-lg mx-5" href="#Experience">Experience</a></li>
-                <li><a className="text-lg mx-5" href="#Technologies">Technologies</a></li>
-                <li><a className="text-lg mx-5" href="#Contact">Contact</a></li>
-                </ul>
-            </div>
+                <li><a className="text-lg mx-5" href="#certifications">Certifications</a></li>
+            </ul>
         </div>
   )
 }

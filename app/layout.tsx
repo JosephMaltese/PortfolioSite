@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Playfair_Display, Inter } from "next/font/google";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+    subsets: ["latin"],
+    weight: ["400", "500", "600"],
+    variable: "--font-serif",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const inter = Inter({
+    subsets: ["latin"],
+    variable: "--font-sans",
 });
 
 export const metadata: Metadata = {
@@ -27,10 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="night">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en">
+      <body className={`${playfair.variable} ${inter.variable}`}>
         {children}
         <SpeedInsights />
       </body>
