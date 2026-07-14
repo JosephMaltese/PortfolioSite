@@ -5,7 +5,7 @@ import HorizontalRule from "@/app/components/HorizontalRule";
 const Projects = () => {
   return (
     <div className="ml-[7%] mr-[7%] mb-10" id="projects">
-        <h2 className="font-bold text-2xl mb-3 mt-5">Recent Work</h2>
+        <h2 className="font-bold text-xl md:text-2xl mb-3 mt-5">Recent Work</h2>
 
         <div className='flex flex-col items-center'>
             <Card imageName="formTracker.gif" title="FormTracker" description="An AI-powered full-stack fitness platform that analyzes uploaded workout videos to estimate repetitions and evaluate exercise form using computer vision and pose estimation." link="https://github.com/JosephMaltese/FormTracker"/>

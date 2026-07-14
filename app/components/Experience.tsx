@@ -50,7 +50,7 @@ const experienceDataList = [
 const Experience = () => {
     return (
         <div className="pl-[7%] pr-[7%] mt-6" id="experience">
-            <h2 className="font-bold text-2xl mb-3">Experience</h2>
+            <h2 className="font-bold text-xl md:text-2xl mb-3">Experience</h2>
             <ul>
                 {experienceDataList.map((experienceDataItem, index) => {
                     return <li key={index}>

@@ -36,17 +36,17 @@ const certificationList: CertificationData[] = [
 const Certifications = () => {
     return (
         <div className="pl-[7%] pr-[7%] mt-6" id="certifications">
-            <h2 className="font-bold text-2xl mb-5">Certifications & Courses</h2>
+            <h2 className="font-bold text-xl md:text-2xl mb-5">Certifications & Courses</h2>
             <ul>
                 {certificationList.map((certification, index) => {
                     return (
                         <li key={index} className="flex flex-row justify-between mb-5">
                             <div>
-                                <h3 className="font-bold">{certification.name}</h3>
-                                <p>{certification.organizationName}</p>
-                                {certification.topics && <p>Topics: {certification.topics}</p>}
+                                <h3 className="font-bold md:text-md text-sm">{certification.name}</h3>
+                                <p className="md:text-md text-sm">{certification.organizationName}</p>
+                                {certification.topics && <p className="md:text-md text-sm">Topics: {certification.topics}</p>}
                             </div>
-                            <p>{certification.date}</p>
+                            <p className="md:text-md text-sm ml-3 max-w-12 md:max-w-full">{certification.date}</p>
                         </li>);
                 })}
             </ul>
