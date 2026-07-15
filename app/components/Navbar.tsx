@@ -22,41 +22,73 @@ const Navbar = () => {
       window.removeEventListener('resize', handleResize); // Clean up listener
     };
   }, []);
-  return isDesktop ? (
-        <div className="flex flex-row shadow-md w-full justify-between fixed z-20 h-16 items-center" style={{ backgroundColor: '#F8F7F3' }}>
-            <p className="ser ml-8">JM</p>
-            <ul className="flex flex-row px-1">
-                <li><a className="text-lg p-5 py-3 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#home">Home</a></li>
-                <li><a className="text-lg p-5 py-3 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#education">Education</a></li>
-                <li><a className="text-lg p-5 py-3 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#experience">Experience</a></li>
-                <li><a className="text-lg p-5 py-3 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#projects">Projects</a></li>
-                <li><a className="text-lg p-5 py-3 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#certifications">Certifications</a></li>
-            </ul>
-        </div>
-  ) : canViewMobileMenu ? (
-      <div className="fixed inset-0 z-40 flex min-h-screen flex-col bg-[#F8F7F3]">
-          <div className="flex flex-row w-full justify-end h-16 items-center">
-              <button onClick={handleMenuClick}>
-                  <Image src="/burger-menu.svg" alt="menu icon" width={25} height={25} className="mr-8"/>
-              </button>
-          </div>
-          <ul className="flex flex-col items-center my-auto gap-14">
-              <li><a onClick={handleMenuClick} className="text-3xl p-5 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#home">Home</a></li>
-              <li><a onClick={handleMenuClick} className="text-3xl p-5 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#education">Education</a></li>
-              <li><a onClick={handleMenuClick} className="text-3xl p-5 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#experience">Experience</a></li>
-              <li><a onClick={handleMenuClick} className="text-3xl p-5 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#projects">Projects</a></li>
-              <li><a onClick={handleMenuClick} className="text-3xl p-5 hover:bg-[#eeece6] transition-colors rounded-2xl" href="#certifications">Certifications</a></li>
-          </ul>
+    return (
+        <>
+            {/* Normal navbar */}
+            <nav
+                className="fixed z-20 flex h-16 w-full items-center justify-between shadow-md"
+                style={{ backgroundColor: '#F8F7F3' }}
+            >
+                <p className="ser ml-8">JM</p>
 
-      </div>
-  ) : (
-      <div className="flex flex-row shadow-md w-full justify-between fixed z-20 h-16 items-center" style={{ backgroundColor: '#F8F7F3' }}>
-          <p className="ser ml-8">JM</p>
-          <button onClick={handleMenuClick}>
-              <Image src="/burger-menu.svg" alt="menu icon" width={25} height={25} className="mr-8"/>
-          </button>
-      </div>
-  );
+                {isDesktop ? (
+                    <ul className="flex flex-row px-1">
+                        <li><a className="rounded-2xl p-5 text-lg transition-colors hover:bg-[#eeece6]" href="#home">Home</a></li>
+                        <li><a className="rounded-2xl p-5 text-lg transition-colors hover:bg-[#eeece6]" href="#education">Education</a></li>
+                        <li><a className="rounded-2xl p-5 text-lg transition-colors hover:bg-[#eeece6]" href="#experience">Experience</a></li>
+                        <li><a className="rounded-2xl p-5 text-lg transition-colors hover:bg-[#eeece6]" href="#projects">Projects</a></li>
+                        <li><a className="rounded-2xl p-5 text-lg transition-colors hover:bg-[#eeece6]" href="#certifications">Certifications</a></li>
+                    </ul>
+                ) : (
+                    <button
+                        onClick={handleMenuClick}
+                        aria-label={canViewMobileMenu ? 'Close menu' : 'Open menu'}
+                    >
+                        <Image
+                            src="/burger-menu.svg"
+                            alt=""
+                            width={25}
+                            height={25}
+                            className="mr-8"
+                        />
+                    </button>
+                )}
+            </nav>
+
+            {/* Mobile menu — always mounted, so it can animate closed */}
+            <div
+                className={`fixed inset-0 z-30 flex min-h-screen flex-col bg-[#F8F7F3]
+        transition-all duration-300 ease-in-out
+        ${canViewMobileMenu
+                    ? 'translate-y-0 opacity-100 pointer-events-auto'
+                    : '-translate-y-4 opacity-0 pointer-events-none'
+                }`}
+            >
+                <div className="flex h-16 w-full items-center justify-end">
+                    <button
+                        onClick={handleMenuClick}
+                        aria-label="Close menu"
+                    >
+                        <Image
+                            src="/burger-menu.svg"
+                            alt=""
+                            width={25}
+                            height={25}
+                            className="mr-8"
+                        />
+                    </button>
+                </div>
+
+                <ul className="my-auto flex flex-col items-center gap-14">
+                    <li><a onClick={() => setCanViewMobileMenu(false)} className="rounded-2xl p-5 text-3xl transition-colors hover:bg-[#eeece6]" href="#home">Home</a></li>
+                    <li><a onClick={() => setCanViewMobileMenu(false)} className="rounded-2xl p-5 text-3xl transition-colors hover:bg-[#eeece6]" href="#education">Education</a></li>
+                    <li><a onClick={() => setCanViewMobileMenu(false)} className="rounded-2xl p-5 text-3xl transition-colors hover:bg-[#eeece6]" href="#experience">Experience</a></li>
+                    <li><a onClick={() => setCanViewMobileMenu(false)} className="rounded-2xl p-5 text-3xl transition-colors hover:bg-[#eeece6]" href="#projects">Projects</a></li>
+                    <li><a onClick={() => setCanViewMobileMenu(false)} className="rounded-2xl p-5 text-3xl transition-colors hover:bg-[#eeece6]" href="#certifications">Certifications</a></li>
+                </ul>
+            </div>
+        </>
+    );
 }
 
 export default Navbar
