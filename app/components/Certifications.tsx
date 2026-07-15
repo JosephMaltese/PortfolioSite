@@ -1,5 +1,4 @@
 import {CertificationData} from "@/app/types/CertificationData";
-import HorizontalRule from "@/app/components/HorizontalRule";
 
 const certificationList: CertificationData[] = [
     new CertificationData(
@@ -50,7 +49,6 @@ const Certifications = () => {
                         </li>);
                 })}
             </ul>
-            <HorizontalRule/>
         </div>
     );
 }

@@ -4,7 +4,7 @@ import React from "react";
 const DesktopLanding = ({ bio }: { bio: string }) => {
     return (
         <>
-            <div id="home" className="pt-40 max-w-full">
+            <div className="pt-40 max-w-full">
                 <div className="flex flex-row max-w-full justify-between pl-[7%] pr-[7%]">
                     <div>
                         <h1 className="text-7xl ser">Joseph</h1>

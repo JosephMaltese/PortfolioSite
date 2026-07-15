@@ -5,7 +5,7 @@ import HorizontalRule from "@/app/components/HorizontalRule";
 const MobileLanding = ({ bio }: { bio: string }) => {
     return (
         <>
-            <div id="home" className="pt-20 max-w-full">
+            <div className="pt-28 max-w-full">
                 <div className="flex flex-col max-w-full pl-[7%] pr-[7%]">
                     <div>
                         <h1 className="text-5xl ser">Joseph</h1>
