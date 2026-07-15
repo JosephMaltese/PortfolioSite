@@ -7,7 +7,7 @@ const LandingContent = () => {
 
     return (
         <>
-            <div id="home"></div>
+            <div id="about"></div>
             <div className="hidden md:block">
                 <DesktopLanding bio={bio} />
             </div>
