@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import HorizontalRule from "@/app/components/HorizontalRule";
 const Education = () => {
-    const awards = "Deans’ Honour Lists (2024-2025), Provost’s Honour List (2024-2025), H.L. Hooker Scholarship (2025)";
+    const awards = "Deans’ Honour List (2024-2025), Provost’s Honour List (2024-2025), H.L. Hooker Scholarship (2025)";
     return(
         <div className="pl-[7%] pr-[7%] mt-6" id="education">
             <h2 className="font-bold text-xl md:text-2xl mb-3">Education</h2>
