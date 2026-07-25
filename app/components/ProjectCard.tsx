@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ imageName, title, description, link }: { imageName: string, title: string, description: string, link: string }) => {
+const ProjectCard = ({ imageName, title, description, link }: { imageName: string, title: string, description: string, link: string }) => {
     return (
         <div className="w-full shadow-xl flex flex-col md:flex-row items-center gap-8 mb-12 p-5 rounded-xl">
             <figure className="w-[300px] h-[220px] flex-shrink-0">
@@ -26,4 +26,4 @@ const Card = ({ imageName, title, description, link }: { imageName: string, titl
     )
 }
 
-export default Card
+export default ProjectCard

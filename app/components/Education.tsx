@@ -5,8 +5,8 @@ const Education = () => {
     return(
         <div className="pl-[7%] pr-[7%] mt-6" id="education">
             <h2 className="font-bold text-xl md:text-2xl mb-3">Education</h2>
-            <div className="flex flex-col items-start md:flex-row md:items-center mb-6">
-                <Image src="/mcmaster-logo.jpg" alt="McMaster University" width={100} height={100}/>
+            <div className="flex flex-col items-start md:flex-row md:items-center mb-6 shadow-xl rounded-xl p-5">
+                <Image src="/mcmaster-logo.jpg" alt="McMaster University" width={100} height={100} className="rounded-xl"/>
                 <div className="md:ml-5">
                     <h3 className="md:text-md text-sm mt-2 md:mt-0 font-bold">McMaster University</h3>
                     <h4 className="md:text-md text-sm">Bachelor of Applied Science - BASc, Computer Science (Co-op)</h4>
