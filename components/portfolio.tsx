@@ -4,12 +4,12 @@ import {
     experience,
     projects,
 } from '@/lib/portfolio-data'
+import Image from 'next/image'
 
 function SectionHeading({ index, title }: { index: string; title: string }) {
     return (
         <div className="mb-10 flex items-baseline gap-4 border-b border-border pb-4">
-            <span className="text-sm tracking-[0.3em] text-accent">{index}</span>
-            <h2 className="font-serif text-3xl uppercase tracking-[0.18em] text-foreground sm:text-4xl">
+            <h2 className="font-serif font-medium text-3xl uppercase tracking-[0.18em] text-foreground sm:text-4xl">
                 {title}
             </h2>
         </div>
@@ -41,6 +41,32 @@ function Section({
 export function Portfolio() {
     return (
         <main className="paper-surface w-full border-t border-border">
+            {/* Education */}
+            <Section id="education" index="02" title="Education">
+                <div className="flex flex-col gap-10">
+                    {education.map((edu) => (
+                        <article key={edu.program} className="flex flex-col gap-2">
+                            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
+                                <h3 className="font-serif text-2xl text-foreground">{edu.program}</h3>
+                                <span className="text-sm tracking-[0.12em] text-muted-foreground">
+                  {edu.period}
+                </span>
+                            </div>
+                            <p className="text-sm uppercase tracking-[0.18em] text-accent">{edu.school}</p>
+                            <p className="mt-1 text-[0.95rem] leading-relaxed text-muted-foreground">
+                                CGPA: {edu.gpa}
+                            </p>
+                            <p className="text-[0.95rem] leading-relaxed text-muted-foreground">
+                                Honors & Awards: {edu.awards}
+                            </p>
+                            <p className="mt-1 text-[0.95rem] leading-relaxed text-muted-foreground">
+                                Relevant Coursework: {edu.coursework}
+                            </p>
+                        </article>
+                    ))}
+                </div>
+            </Section>
+
             {/* Experience */}
             <Section id="experience" index="01" title="Experience">
                 <div className="flex flex-col gap-12">
@@ -71,26 +97,6 @@ export function Portfolio() {
                 </div>
             </Section>
 
-            {/* Education */}
-            <Section id="education" index="02" title="Education">
-                <div className="flex flex-col gap-10">
-                    {education.map((edu) => (
-                        <article key={edu.program} className="flex flex-col gap-2">
-                            <div className="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-                                <h3 className="font-serif text-2xl text-foreground">{edu.program}</h3>
-                                <span className="text-sm tracking-[0.12em] text-muted-foreground">
-                  {edu.period}
-                </span>
-                            </div>
-                            <p className="text-sm uppercase tracking-[0.18em] text-accent">{edu.school}</p>
-                            <p className="mt-1 text-[0.95rem] leading-relaxed text-muted-foreground">
-                                {edu.detail}
-                            </p>
-                        </article>
-                    ))}
-                </div>
-            </Section>
-
             {/* Projects */}
             <Section id="projects" index="03" title="Projects">
                 <div className="flex flex-col gap-8">
@@ -101,9 +107,7 @@ export function Portfolio() {
                         >
                             <div className="flex items-baseline justify-between gap-4">
                                 <h3 className="font-serif text-2xl text-foreground">{project.name}</h3>
-                                <span className="text-sm tracking-[0.12em] text-muted-foreground">
-                  {project.year}
-                </span>
+                                <a href={project.link} target="_blank"><Image src="/arrow.png" alt="link icon" width={10} height={10} /></a>
                             </div>
                             <p className="mt-2 text-[0.95rem] leading-relaxed text-muted-foreground">
                                 {project.description}
@@ -124,7 +128,7 @@ export function Portfolio() {
             </Section>
 
             {/* Certifications */}
-            <Section id="certifications" index="04" title="Certifications">
+            <Section id="certifications" index="04" title="Certifications & Courses">
                 <ul className="flex flex-col">
                     {certifications.map((cert) => (
                         <li
@@ -134,10 +138,11 @@ export function Portfolio() {
                             <div className="flex flex-col gap-0.5">
                                 <span className="font-serif text-xl text-foreground">{cert.name}</span>
                                 <span className="text-sm uppercase tracking-[0.18em] text-accent">
-                  {cert.issuer}
-                </span>
+                                    {cert.issuer}
+                                </span>
+                                {cert.topics.length > 0 && <span className="font-serif text-xl text-foreground">Topics: {cert.topics.join(', ')}</span>}
                             </div>
-                            <span className="text-sm tracking-[0.12em] text-muted-foreground">{cert.year}</span>
+                            <span className="text-sm tracking-[0.12em] text-muted-foreground">{cert.date}</span>
                         </li>
                     ))}
                 </ul>
