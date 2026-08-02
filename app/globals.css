@@ -93,9 +93,15 @@
 
   /* Subtle engraved / embossed letterpress effect for the card text */
   .engraved {
+    color: hsl(var(--card-foreground));
+
+    /* Key: dual-direction shadows for deboss effect */
     text-shadow:
-            0 1px 0 oklch(1 0 0 / 0.6),
-            0 -1px 0 oklch(0.2 0.006 260 / 0.1);
+            0 1px 0 rgba(255, 255, 255, 0.6),   /* top highlight */
+            0 -1px 0 rgba(0, 0, 0, 0.25);       /* bottom shadow */
+
+    /* Slight contrast boost */
+    filter: contrast(1.05);
   }
 
   .tracking-card {
