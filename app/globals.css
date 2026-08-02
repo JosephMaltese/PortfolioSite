@@ -1,28 +1,117 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  --font-serif: var(--font-cormorant), Georgia, 'Times New Roman', serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
 
 :root {
-  --background: #F8F7F3;
-  --card: #FDFCF9;
-  --foreground: #171717;
-  --secondary: #6A6A6A;
-  --border: #D9D6CF;
-  --font-serif: 'Playfair Display', serif;
-  --font-sans: 'Inter', sans-serif;
+  color-scheme: light;
+
+  /* Pale cool bone-white cardstock (matches the film card) */
+  --background: oklch(0.975 0.002 250);
+  --foreground: oklch(0.28 0.005 260);
+
+  /* The card is the same stock as the background for a full-bleed look */
+  --card: oklch(0.98 0.002 250);
+  --card-foreground: oklch(0.26 0.006 260);
+
+  --popover: oklch(0.98 0.002 250);
+  --popover-foreground: oklch(0.26 0.006 260);
+
+  --primary: oklch(0.26 0.006 260);
+  --primary-foreground: oklch(0.98 0.002 250);
+
+  --secondary: oklch(0.945 0.003 250);
+  --secondary-foreground: oklch(0.28 0.005 260);
+
+  --muted: oklch(0.945 0.003 250);
+  --muted-foreground: oklch(0.42 0.006 260);
+
+  /* Faithful charcoal ink accent (no gold) */
+  --accent: oklch(0.34 0.006 260);
+  --accent-foreground: oklch(0.98 0.002 250);
+
+  --destructive: oklch(0.505 0.14 30);
+
+  --border: oklch(0.86 0.004 250);
+  --input: oklch(0.86 0.004 250);
+  --ring: oklch(0.5 0.006 260);
+
+  --radius: 0.25rem;
 }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: Inter, Arial, Helvetica, sans-serif;
-}
-
-.ser{
-  font-family: var(--font-serif);
-  letter-spacing: 0.05em;
-}
-
-.san {
-    font-family: var(--font-sans);
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Layered paper texture over the cool bone base */
+  .paper-surface {
+    background-image:
+            linear-gradient(oklch(0.98 0.002 250 / 0.55), oklch(0.98 0.002 250 / 0.55)),
+            url('/paper-texture.png');
+    background-repeat: repeat;
+    background-size:
+            auto,
+            520px 520px;
+    background-blend-mode: normal, multiply;
+  }
+
+  /* Subtle engraved / embossed letterpress effect for the card text */
+  .engraved {
+    color: hsl(var(--card-foreground));
+
+    /* Key: dual-direction shadows for deboss effect */
+    text-shadow:
+            0 1px 0 rgba(255, 255, 255, 0.6),   /* top highlight */
+            0 -1px 0 rgba(0, 0, 0, 0.25);       /* bottom shadow */
+
+    /* Slight contrast boost */
+    filter: contrast(1.05);
+  }
+
+  .tracking-card {
+    letter-spacing: 0.28em;
+  }
+
+  /* Small-caps serif, as on the film card ("Patrick BATEMAN") */
+  .smallcaps {
+    font-family: var(--font-serif);
+    font-variant: small-caps;
+    font-feature-settings: 'smcp' 1;
+  }
+}
