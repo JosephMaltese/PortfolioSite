@@ -6,7 +6,7 @@ import {
 } from '@/lib/portfolio-data'
 import Image from 'next/image'
 
-function SectionHeading({ index, title }: { index: string; title: string }) {
+function SectionHeading({ title }: { title: string }) {
     return (
         <div className="mb-10 flex items-baseline gap-4 border-b border-border pb-4">
             <h2 className="font-serif font-medium text-3xl uppercase tracking-[0.18em] text-foreground sm:text-4xl">
@@ -18,12 +18,10 @@ function SectionHeading({ index, title }: { index: string; title: string }) {
 
 function Section({
                      id,
-                     index,
                      title,
                      children,
                  }: {
     id: string
-    index: string
     title: string
     children: React.ReactNode
 }) {
@@ -32,7 +30,7 @@ function Section({
             id={id}
             className="mx-auto w-full max-w-3xl scroll-mt-16 px-6 py-20 sm:py-24"
         >
-            <SectionHeading index={index} title={title} />
+            <SectionHeading title={title} />
             {children}
         </section>
     )
@@ -42,7 +40,7 @@ export function Portfolio() {
     return (
         <main className="paper-surface w-full border-t border-border">
             {/* Education */}
-            <Section id="education" index="02" title="Education">
+            <Section id="education" title="Education">
                 <div className="flex flex-col gap-10">
                     {education.map((edu) => (
                         <article key={edu.program} className="flex flex-col gap-2">
@@ -68,7 +66,7 @@ export function Portfolio() {
             </Section>
 
             {/* Experience */}
-            <Section id="experience" index="01" title="Experience">
+            <Section id="experience" title="Experience">
                 <div className="flex flex-col gap-12">
                     {experience.map((job) => (
                         <article key={`${job.company}-${job.role}`} className="flex flex-col gap-3">
@@ -98,7 +96,7 @@ export function Portfolio() {
             </Section>
 
             {/* Projects */}
-            <Section id="projects" index="03" title="Projects">
+            <Section id="projects" title="Projects">
                 <div className="flex flex-col gap-8">
                     {projects.map((project) => (
                         <article
@@ -128,7 +126,7 @@ export function Portfolio() {
             </Section>
 
             {/* Certifications */}
-            <Section id="certifications" index="04" title="Certifications & Courses">
+            <Section id="certifications" title="Certifications & Courses">
                 <ul className="flex flex-col">
                     {certifications.map((cert) => (
                         <li
