@@ -8,10 +8,10 @@ export function BusinessCard() {
             {/* Top row: phone left, affiliation right */}
             <div className="flex items-start justify-between gap-4">
                 <p className="engraved smallcaps font-bold tracking-[0.1em] text-card-foreground">
-                    <span className="text-[clamp(0.75rem,1.5vw,1.15rem)] align-top">
+                    <span className="text-[clamp(0.85rem,1.65vw,1.15rem)] align-top">
                         905
                     </span>
-                    <span className="ml-1 text-[clamp(1.15rem,2vw,1.5rem)] align-baseline relative -top-[0.05em]">
+                    <span className="ml-1 text-[clamp(1.1rem,1.95vw,1.35rem)] align-baseline relative -top-[0.05em]">
                         512 4184
                     </span>
                 </p>
