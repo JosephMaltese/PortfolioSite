@@ -3,7 +3,7 @@ export function BusinessCard() {
     return (
         <section
             aria-label="Introduction"
-            className="paper-surface relative flex min-h-[100svh] w-full flex-col overflow-hidden px-[7vw] pt-[8vh] pb-[16vh]"
+            className="paper-surface relative flex min-h-[100svh] w-full flex-col overflow-hidden px-[7vw] pt-[8vh] pb-[8vh]"
         >
             {/* Top row: phone left, affiliation right */}
             <div className="flex items-start justify-between gap-4">
