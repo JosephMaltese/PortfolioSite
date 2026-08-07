@@ -35,6 +35,10 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className={`${cormorant.variable} ${inter.variable} bg-background`}>
+        <head>
+            {/* Disable automatic telephone number detection on mobile browsers */}
+            <meta name="format-detection" content="telephone=no" />
+        </head>
         <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
