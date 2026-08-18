@@ -17,9 +17,9 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-    title: 'Joseph Maltese — Software Engineer',
+    title: "Joseph's Portfolio",
     description:
-        'Personal portfolio of Joseph Maltese, a Software Engineer and McMaster University Computer Science student based in Hamilton, Ontario.',
+        'The personal portfolio of Joseph Maltese, a Computer Science student at McMaster University in Hamilton, Ontario',
     generator: 'v0.app',
 }
 
