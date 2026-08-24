@@ -134,7 +134,7 @@ export function Portfolio() {
                             className="flex flex-col justify-between gap-1 border-b border-border py-5 last:border-b-0 sm:flex-row sm:items-baseline"
                         >
                             <div className="flex flex-col gap-0.5">
-                                <span className="font-serif text-base sm:text-xl text-foreground">{cert.name}</span>
+                                <a className="hover:underline" target="_blank" href={cert.link}><span className="font-serif text-base sm:text-xl text-foreground">{cert.name}</span></a>
                                 <span className="text-xs sm:text-sm uppercase tracking-[0.18em] text-accent">
                                     {cert.issuer}
                                 </span>

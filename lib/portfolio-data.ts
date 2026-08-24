@@ -27,6 +27,7 @@ export type Certification = {
     issuer: string
     date: string
     topics: string[]
+    link: string
 }
 
 export const experience: Experience[] = [
@@ -104,11 +105,11 @@ export const education: Education[] = [
 
 export const projects: Project[] = [
     {
-        name: 'FormTracker',
+        name: 'FormWise',
         description:
             'An AI-powered full-stack fitness platform that analyzes uploaded workout videos to estimate repetitions and evaluate exercise form using computer vision and pose estimation.',
-        stack: ['React', 'TypeScript', 'Supabase', 'Tailwind', 'FastAPI', 'MediaPipe'],
-        link: 'https://github.com/JosephMaltese/FormTracker'
+        stack: ['React Native', 'TypeScript', 'Supabase', 'FastAPI', 'MediaPipe'],
+        link: 'https://github.com/JosephMaltese/FormWise-Frontend'
     },
     {
         name: 'STaBL.rocks',
@@ -148,9 +149,9 @@ export const projects: Project[] = [
 ]
 
 export const certifications: Certification[] = [
-    { name: 'Angular Essential Training', issuer: 'LinkedIn Learning', date: 'June 2026', topics: ['Angular', 'TypeScript'] },
-    { name: 'The Complete GitHub Actions & Workflows Guide', issuer: 'Udemy', date: 'May 2025', topics: ['CI/CD', 'Github Actions', 'YAML'] },
-    { name: 'Machine Learning with NumPy, pandas, scikit-learn, and More', issuer: 'Educative', date: 'August 2025', topics: ['NumPy', 'pandas', 'scikit-learn', 'clustering', 'deep learning'] },
-    { name: 'CS50\'s Introduction to Artificial Intelligence with Python', issuer: 'Harvard University', date: 'May 2024', topics: ['Search', 'optimization', 'probability', 'ML', 'neural nets'] },
-    { name: 'Robot Framework Test Automation: Level 1 (Selenium)', issuer: 'LinkedIn Learning', date: 'April 2024', topics: [] }
+    { name: 'Angular Essential Training', issuer: 'LinkedIn Learning', date: 'June 2026', topics: ['Angular', 'TypeScript'], link: "https://www.linkedin.com/learning/certificates/09b6310372421783d4d4d4735a1b7178d058eb3255351dc501f95a45b9133f9a?u=2216250" },
+    { name: 'The Complete GitHub Actions & Workflows Guide', issuer: 'Udemy', date: 'May 2025', topics: ['CI/CD', 'Github Actions', 'YAML'], link: "https://www.udemy.com/certificate/UC-96bd7cd0-baf9-4757-9699-3ed93dc49d10/" },
+    { name: 'Machine Learning with NumPy, pandas, scikit-learn, and More', issuer: 'Educative', date: 'August 2025', topics: ['NumPy', 'pandas', 'scikit-learn', 'clustering', 'deep learning'], link: "https://www.educative.io/verify-certificate/DYyN3lVMLDLTMjl8BAn21gunX0k3YO08ZuG" },
+    { name: 'CS50\'s Introduction to Artificial Intelligence with Python', issuer: 'Harvard University', date: 'May 2024', topics: ['Search', 'optimization', 'probability', 'ML', 'neural nets'], link: "https://certificates.cs50.io/41727125-5b0e-433c-bb2d-bf8be1c2f798.png?size=letter" },
+    { name: 'Robot Framework Test Automation: Level 1 (Selenium)', issuer: 'LinkedIn Learning', date: 'April 2024', topics: [], link: "https://www.linkedin.com/learning/certificates/be599f2ab0529bebf32d1207997b62bf4a3c1a050cde265a5046d5883587d1f6?u=2216250" }
 ]
