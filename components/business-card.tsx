@@ -39,7 +39,7 @@ export function BusinessCard() {
 
             {/* Bottom: address / contact line */}
             <p className="engraved smallcaps text-center text-[clamp(0.7rem,1.5vw,1.15rem)] tracking-[0.06em] text-card-foreground font-bold">
-                Hamilton, Ontario | Software Developer Intern at Soti | <a href="mailto:maltesj@mcmaster.ca" className="hover:underline">maltesj@mcmaster.ca</a> | <a href="https://github.com/JosephMaltese" className="hover:underline" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/josephmaltese/" className="hover:underline" target="_blank">LinkedIn</a>
+                Hamilton, Ontario | <a href="mailto:maltesj@mcmaster.ca" className="hover:underline">maltesj@mcmaster.ca</a> | <a href="https://github.com/JosephMaltese" className="hover:underline" target="_blank">Github</a> | <a href="https://www.linkedin.com/in/josephmaltese/" className="hover:underline" target="_blank">LinkedIn</a>
             </p>
         </section>
     )
